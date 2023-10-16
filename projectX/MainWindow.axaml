@@ -1,0 +1,20 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="projectX.MainWindow"
+        Title="Application">
+    <StackPanel>
+    <TextBlock> Статистика </TextBlock>
+    <TextBox Watermark="№ заявки" />
+    <Button x:Name="Service_Window" Content="Работы" Click="Service_Window_OnClick" />
+    <Button x:Name="Worker_Window" Content="Работники" Click="Worker_Window_OnClick" />
+    <Button x:Name="Report_Window" Content="Отчеты" Click="Report_Window_OnClick"/>
+    <Button x:Name="AddApp_Window" Content="Добавить" Click="Add_Window_OnClick"/>
+    <Button x:Name="Application_Count" Content="Количество выполненных заявок" Click="Application_Count_OnClick"/>
+    <Button x:Name="Average_Complete" Content="Среднее время выполнения" Click="Average_Complete_OnClick"/>
+    <Button x:Name="Stats" Content="Статистика т.п." Click="Stats_OnClick"/>
+    <Button x:Name="Exit" Content="Выйти" Click="Exit_OnClick" />
+    </StackPanel>
+</Window>

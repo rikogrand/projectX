@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="projectX/AddApplication.axaml" value="projectX/projectX.csproj" />
+        <entry key="projectX/App.axaml" value="projectX/projectX.csproj" />
+        <entry key="projectX/Entities/ReportWindow.axaml" value="projectX/projectX.csproj" />
+        <entry key="projectX/Entities/ServiceWindow.axaml" value="projectX/projectX.csproj" />
+        <entry key="projectX/Entities/WorkerWindow.axaml" value="projectX/projectX.csproj" />
+        <entry key="projectX/MainWindow.axaml" value="projectX/projectX.csproj" />
+        <entry key="projectX/Priority.axaml" value="projectX/projectX.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
