@@ -10,11 +10,36 @@
 
 
     <ItemGroup>
-        <PackageReference Include="Avalonia" Version="11.0.2"/>
+        <PackageReference Include="Avalonia.Controls.DataGrid" Version="11.0.2" />
         <PackageReference Include="Avalonia.Desktop" Version="11.0.2"/>
         <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.2"/>
         <PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.2"/>
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
         <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.2"/>
+        <PackageReference Include="MySql.Data" Version="8.1.0" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <Compile Update="Apps\MainWindow.axaml.cs">
+        <DependentUpon>MainWindow.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Apps\AddApplication.axaml.cs">
+        <DependentUpon>AddApplication.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Apps\EditApplication.axaml.cs">
+        <DependentUpon>EditApplication.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Repairs\RepairsWin.axaml.cs">
+        <DependentUpon>RepairsWin.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Reports\ReportsWin.axaml.cs">
+        <DependentUpon>Reports.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
     </ItemGroup>
 </Project>

@@ -5,11 +5,28 @@
       <map>
         <entry key="projectX/AddApplication.axaml" value="projectX/projectX.csproj" />
         <entry key="projectX/App.axaml" value="projectX/projectX.csproj" />
+        <entry key="projectX/Apps/AddApplication.axaml" value="projectX/projectX.csproj" />
+        <entry key="projectX/Apps/EditApplication.axaml" value="projectX/projectX.csproj" />
+        <entry key="projectX/Apps/MainWindow.axaml" value="projectX/projectX.csproj" />
+        <entry key="projectX/EditApplication.axaml" value="projectX/projectX.csproj" />
         <entry key="projectX/Entities/ReportWindow.axaml" value="projectX/projectX.csproj" />
         <entry key="projectX/Entities/ServiceWindow.axaml" value="projectX/projectX.csproj" />
         <entry key="projectX/Entities/WorkerWindow.axaml" value="projectX/projectX.csproj" />
         <entry key="projectX/MainWindow.axaml" value="projectX/projectX.csproj" />
         <entry key="projectX/Priority.axaml" value="projectX/projectX.csproj" />
+        <entry key="projectX/Repairs.axaml" value="projectX/projectX.csproj" />
+        <entry key="projectX/Repairs/AddRepair.axaml" value="projectX/projectX.csproj" />
+        <entry key="projectX/Repairs/AddRepairWin.axaml" value="projectX/projectX.csproj" />
+        <entry key="projectX/Repairs/DeleteRepairWin.axaml" value="projectX/projectX.csproj" />
+        <entry key="projectX/Repairs/EditRepairWin.axaml" value="projectX/projectX.csproj" />
+        <entry key="projectX/Repairs/RepairsWin.axaml" value="projectX/projectX.csproj" />
+        <entry key="projectX/RepairsWin.axaml" value="projectX/projectX.csproj" />
+        <entry key="projectX/Reports.axaml" value="projectX/projectX.csproj" />
+        <entry key="projectX/Reports/AddReportWin.axaml" value="projectX/projectX.csproj" />
+        <entry key="projectX/Reports/DeleteReportWin.axaml" value="projectX/projectX.csproj" />
+        <entry key="projectX/Reports/EditReportWin.axaml" value="projectX/projectX.csproj" />
+        <entry key="projectX/Reports/Reports.axaml" value="projectX/projectX.csproj" />
+        <entry key="projectX/Reports/ReportsWin.axaml" value="projectX/projectX.csproj" />
       </map>
     </option>
   </component>

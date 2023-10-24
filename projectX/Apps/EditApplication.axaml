@@ -1,0 +1,94 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:projectX="clr-namespace:projectX"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="projectX.EditApplication"
+        x:DataType="projectX:Application"
+        Title="Изменить заявку"
+        Height="700"
+        Width="600"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Номер заявки</TextBlock>
+        <TextBox Grid.Column="1" Name="TBxId" Height="10" HorizontalAlignment="Left" Width="300"
+                 Text="{Binding App_id}" />
+
+        <TextBlock Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">Приоритет</TextBlock>
+        <ComboBox Grid.Row="1" Grid.Column="1" Name="CBoxPr" x:CompileBindings="False" Height="10"
+                  HorizontalAlignment="Left" VerticalAlignment="Center" Width="300">
+            <ComboBox.ItemTemplate>
+                <DataTemplate x:DataType="projectX:Priority">
+                    <TextBlock Text="{Binding Pr_name}"></TextBlock>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <TextBlock Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">Дата заявки</TextBlock>
+        <DatePicker Grid.Row="2" Grid.Column="1" Name="DPApp_Date" HorizontalAlignment="Left"
+                    SelectedDate="{Binding App_Date}" />
+
+        <TextBlock Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center">Оборудование</TextBlock>
+        <TextBox Grid.Row="3" Grid.Column="1" Name="TBEquipment" Height="10" HorizontalAlignment="Left" Width="300"
+                 Text="{Binding Equipment}" />
+
+        <TextBlock Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center">Серийный номер</TextBlock>
+        <TextBox Grid.Row="4" Grid.Column="1" Name="TBSerial_number" Height="10" HorizontalAlignment="Left" Width="300"
+                 Text="{Binding Serial_number}" />
+
+        <TextBlock Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center">Тип неисправности</TextBlock>
+        <ComboBox Grid.Row="5" Grid.Column="1" Name="CBType" Height="10" x:CompileBindings="False"
+                  HorizontalAlignment="Left" VerticalAlignment="Center" Width="300">
+            <ComboBox.ItemTemplate>
+                <DataTemplate x:DataType="projectX:Type">
+                    <TextBlock Text="{Binding Type_name}"></TextBlock>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <TextBlock Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center">Описание</TextBlock>
+        <TextBox Grid.Row="6" Grid.Column="1" Name="TBDescription" Height="10" HorizontalAlignment="Left" Width="300"
+                 Text="{Binding Description}" />
+
+        <TextBlock Grid.Row="7" VerticalAlignment="Center" HorizontalAlignment="Center">Клиент</TextBlock>
+        <TextBox Grid.Row="7" Grid.Column="1" Name="TBClient" Height="10" HorizontalAlignment="Left" Width="300"
+                 Text="{Binding Client}" />
+
+        <TextBlock Grid.Row="8" VerticalAlignment="Center" HorizontalAlignment="Center">Статус</TextBlock>
+        <ComboBox Grid.Row="8" Grid.Column="1" Name="CBStatus" Height="10" x:CompileBindings="False"
+                  HorizontalAlignment="Left" VerticalAlignment="Center" Width="300">
+            <ComboBox.ItemTemplate>
+                <DataTemplate x:DataType="projectX:Status">
+                    <TextBlock Text="{Binding Status_name}"></TextBlock>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <TextBlock Grid.Row="9" VerticalAlignment="Center" HorizontalAlignment="Center">Комментарий</TextBlock>
+        <TextBox Grid.Row="9" Grid.Column="1" Name="TBComment" Height="10" HorizontalAlignment="Left" Width="300"
+                 Text="{Binding Comment}" />
+        
+        <StackPanel HorizontalAlignment="Center" Grid.Row="10" Grid.ColumnSpan="2" Spacing="10" Orientation="Horizontal">
+            <Button Grid.Row="10" Name="BackButton2" Content="Вернуться" Click="BackButton2_OnClick" />
+            <Button Grid.Row="10" Grid.Column="1" Name="EditButton" Content="Изменить" Click="EditButton_OnClick" />
+        </StackPanel>
+    </Grid>
+</Window>

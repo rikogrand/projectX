@@ -1,0 +1,45 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="projectX.RepairsWin"
+        Title="Работы"
+        WindowStartupLocation="CenterScreen">
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" Margin="7,10">
+                <TextBlock VerticalAlignment="Center">Поиск работы:</TextBlock>
+                <TextBox Name="search_repair" Width="200" Margin="10, 0, 0, 0" TextChanged="Search_repair_OnTextChanged"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button  x:Name="AddRepair_Window" Width="85" HorizontalAlignment="Left"  Content="Добавить" Click="AddRepair_Window_OnClick"/>
+                <Button  x:Name="EditRepair_Window" HorizontalAlignment="Center"  Content="Изменить" Click="EditRepair_Window_OnClick"></Button>
+                <Button  x:Name="DelRepair_Window" Width="85"  HorizontalAlignment="Left"  Content="Удалить" Click="DelRepair_Window_OnClick"/>
+                <Button  x:Name="CloseBtn" Width="85"  HorizontalAlignment="Left"  Content="Назад" Click="CloseBtn_OnClick"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel>
+            <DataGrid x:Name="RepairDataGrid"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      GridLinesVisibility="All"
+                      BorderThickness="1"
+                      BorderBrush="Gray"
+                      Margin="7,20"
+                      Height="550"
+                      Width="630"
+                      x:CompileBindings="False">
+                    
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding Repair_id}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Номер заявки" Binding="{Binding Application}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Рабочий" Binding="{Binding Worker}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Заказ" Binding="{Binding Order}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Доп услуга" Binding="{Binding Service}"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </StackPanel>
+    
+</Window>

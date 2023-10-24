@@ -1,9 +1,9 @@
 namespace projectX;
 public class Order
 {
-    private int Order_id { get; set; }
-    private string Detail { get; set; }
-    private float Price { get; set; }
-    private int Count { get; set; }
-    private float Cost { get; set; }
+    public int Order_id { get; set; }
+    public string Detail { get; set; }
+    public float Price { get; set; }
+    public int Count { get; set; }
+    public float Cost { get; set; }
 }

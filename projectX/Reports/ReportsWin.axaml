@@ -1,0 +1,44 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="projectX.ReportsWin"
+        Title="Отчеты"
+        WindowStartupLocation="CenterScreen">
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" Margin="7,10">
+                <TextBlock VerticalAlignment="Center">Поиск отчета:</TextBlock>
+                <TextBox Name="search_report" Width="200" Margin="10, 0, 0, 0" TextChanged="Search_report_OnTextChanged"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button  x:Name="AddReportBtn" Width="85" HorizontalAlignment="Left"  Content="Добавить" Click="AddReportBtn_OnClick"/>
+                <Button  x:Name="EditReportBtn" HorizontalAlignment="Center"  Content="Изменить" Click="EditReportBtn_OnClick"></Button>
+                <Button  x:Name="DelReportBtn" Width="85"  HorizontalAlignment="Left"  Content="Удалить" Click="DelReportBtn_OnClick"/>
+                <Button  x:Name="CloseBtn" Width="85"  HorizontalAlignment="Left"  Content="Назад" Click="CloseBtn_OnClick"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel>
+            <DataGrid x:Name="ReportDataGrid"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      GridLinesVisibility="All"
+                      BorderThickness="1"
+                      BorderBrush="Gray"
+                      Margin="7,20"
+                      Height="550"
+                      Width="690"
+                      x:CompileBindings="False">
+ 
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding Report_id}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Номер работы" Binding="{Binding Repair}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Время выполнения" Binding="{Binding Complete_time}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Причина неисправности" Binding="{Binding Defect_cause}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Описание работы" Binding="{Binding Work_description}"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </StackPanel>
+</Window>

@@ -1,0 +1,54 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:projectX="clr-namespace:projectX"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="projectX.Reports.EditReportWin"
+        x:DataType="projectX:Report"
+        Title="EditReportWin"
+        Height="700"
+        Width="600"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+       <Grid.ColumnDefinitions>
+           <ColumnDefinition Width="150"></ColumnDefinition>
+           <ColumnDefinition></ColumnDefinition>
+       </Grid.ColumnDefinitions>
+       <Grid.RowDefinitions>
+           <RowDefinition></RowDefinition>
+           <RowDefinition></RowDefinition>
+           <RowDefinition></RowDefinition>
+           <RowDefinition></RowDefinition>
+           <RowDefinition></RowDefinition>
+           <RowDefinition></RowDefinition>
+       </Grid.RowDefinitions>
+       <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" >Номер отчета</TextBlock>
+       <TextBox Grid.Column="1" Name="TBxId" Height="10" HorizontalAlignment="Left" Width="300" Text="{Binding Report_id}"/>
+       
+       <TextBlock Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">Номер работы</TextBlock>
+       <ComboBox Grid.Row="1" Grid.Column="1" Name="CBRepair" Height="10" x:CompileBindings="False" HorizontalAlignment="Left" VerticalAlignment="Center" Width="300">
+           <ComboBox.ItemTemplate>
+               <DataTemplate x:DataType="projectX:Repair">
+                   <TextBlock Text="{Binding Repair_id}"></TextBlock>
+               </DataTemplate>
+           </ComboBox.ItemTemplate>
+       </ComboBox>
+       
+       <TextBlock Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">Время выполнения</TextBlock>
+       <TimePicker Grid.Row="2" Grid.Column="1" Name="TPTime" x:CompileBindings="False" HorizontalAlignment="Left" VerticalAlignment="Center"></TimePicker>
+       
+       <TextBlock Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center">Причина неисправности</TextBlock>
+       <TextBox Grid.Row="3" Grid.Column="1" Name="TBCause" Height="10" HorizontalAlignment="Left" Width="300" Text="{Binding Defect_cause}"/>
+       
+       
+       <TextBlock Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center">Описание работы</TextBlock>
+       <TextBox Grid.Row="4" Grid.Column="1" Name="TBDescription" Height="10" HorizontalAlignment="Left" Width="300" Text="{Binding Work_description}"/>
+       
+       <StackPanel HorizontalAlignment="Center" Grid.Row="10" Grid.ColumnSpan="2" Spacing="10" Orientation="Horizontal">
+           <Button Grid.Row="10" Name="BackButton" Content="Вернуться" Click="BackButton_OnClick"/>
+           <Button Grid.Row="10" Grid.Column="1" Name="AddButton" Content="Добавить" Click="AddButton_OnClick" />
+       </StackPanel>
+   </Grid>
+</Window>
+

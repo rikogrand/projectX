@@ -1,7 +1,7 @@
 namespace projectX;
 public class Service
 {
-    private int Service_id { get; set; }
-    private int Service_name { get; set; }
-    private int Service_worker { get; set; }
+    public int Service_id { get; set; }
+    public string Service_name { get; set; }
+    public int Service_worker { get; set; }
 }

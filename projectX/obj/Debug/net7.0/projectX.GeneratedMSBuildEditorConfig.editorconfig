@@ -13,22 +13,43 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = projectX
-build_property.ProjectDir = /home/KHPK.RU/student/RiderProjects/projectX/projectX/
+build_property.ProjectDir = /home/KHPK.RU/student/Рабочий стол/projectX/projectX (2)/projectX/projectX/
 
-[/home/KHPK.RU/student/RiderProjects/projectX/projectX/AddApplication.axaml]
+[/home/KHPK.RU/student/Рабочий стол/projectX/projectX (2)/projectX/projectX/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/KHPK.RU/student/RiderProjects/projectX/projectX/App.axaml]
+[/home/KHPK.RU/student/Рабочий стол/projectX/projectX (2)/projectX/projectX/Apps/AddApplication.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/KHPK.RU/student/RiderProjects/projectX/projectX/Entities/ReportWindow.axaml]
+[/home/KHPK.RU/student/Рабочий стол/projectX/projectX (2)/projectX/projectX/Apps/EditApplication.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/KHPK.RU/student/RiderProjects/projectX/projectX/Entities/ServiceWindow.axaml]
+[/home/KHPK.RU/student/Рабочий стол/projectX/projectX (2)/projectX/projectX/Apps/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/KHPK.RU/student/RiderProjects/projectX/projectX/Entities/WorkerWindow.axaml]
+[/home/KHPK.RU/student/Рабочий стол/projectX/projectX (2)/projectX/projectX/Entities/WorkerWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/KHPK.RU/student/RiderProjects/projectX/projectX/MainWindow.axaml]
+[/home/KHPK.RU/student/Рабочий стол/projectX/projectX (2)/projectX/projectX/Repairs/AddRepairWin.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/KHPK.RU/student/Рабочий стол/projectX/projectX (2)/projectX/projectX/Repairs/DeleteRepairWin.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/KHPK.RU/student/Рабочий стол/projectX/projectX (2)/projectX/projectX/Repairs/EditRepairWin.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/KHPK.RU/student/Рабочий стол/projectX/projectX (2)/projectX/projectX/Repairs/RepairsWin.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/KHPK.RU/student/Рабочий стол/projectX/projectX (2)/projectX/projectX/Reports/AddReportWin.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/KHPK.RU/student/Рабочий стол/projectX/projectX (2)/projectX/projectX/Reports/DeleteReportWin.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/KHPK.RU/student/Рабочий стол/projectX/projectX (2)/projectX/projectX/Reports/EditReportWin.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/KHPK.RU/student/Рабочий стол/projectX/projectX (2)/projectX/projectX/Reports/ReportsWin.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

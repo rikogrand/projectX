@@ -1,13 +1,14 @@
 using System;
+using Org.BouncyCastle.Asn1.Cms;
 
 namespace projectX;
 
 public class Report
 {
-    private int Report_id { get; set; }
-    private int Repair { get; set; }
-    private DateTime Complete_time { get; set; }
-    private string Defect_cause { get; set; }
-    private string Work_description { get; set; }
+    public int Report_id { get; set; }
+    public int Repair { get; set; }
+    public TimeSpan Complete_time { get; set; }
+    public string Defect_cause { get; set; }
+    public string Work_description { get; set; }
 
 }

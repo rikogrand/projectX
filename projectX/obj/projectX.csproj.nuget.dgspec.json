@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/KHPK.RU/student/RiderProjects/projectX/projectX/projectX.csproj": {}
+    "/home/KHPK.RU/student/Рабочий стол/projectX/projectX (2)/projectX/projectX/projectX.csproj": {}
   },
   "projects": {
-    "/home/KHPK.RU/student/RiderProjects/projectX/projectX/projectX.csproj": {
+    "/home/KHPK.RU/student/Рабочий стол/projectX/projectX (2)/projectX/projectX/projectX.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/KHPK.RU/student/RiderProjects/projectX/projectX/projectX.csproj",
+        "projectUniqueName": "/home/KHPK.RU/student/Рабочий стол/projectX/projectX (2)/projectX/projectX/projectX.csproj",
         "projectName": "projectX",
-        "projectPath": "/home/KHPK.RU/student/RiderProjects/projectX/projectX/projectX.csproj",
+        "projectPath": "/home/KHPK.RU/student/Рабочий стол/projectX/projectX (2)/projectX/projectX/projectX.csproj",
         "packagesPath": "/home/KHPK.RU/student/.nuget/packages/",
-        "outputPath": "/home/KHPK.RU/student/RiderProjects/projectX/projectX/obj/",
+        "outputPath": "/home/KHPK.RU/student/Рабочий стол/projectX/projectX (2)/projectX/projectX/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/KHPK.RU/student/.nuget/NuGet/NuGet.Config"
@@ -38,7 +38,7 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "Avalonia": {
+            "Avalonia.Controls.DataGrid": {
               "target": "Package",
               "version": "[11.0.2, )"
             },
@@ -57,6 +57,10 @@
             "Avalonia.Themes.Fluent": {
               "target": "Package",
               "version": "[11.0.2, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.1.0, )"
             }
           },
           "imports": [

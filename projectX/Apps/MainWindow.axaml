@@ -1,0 +1,65 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="projectX.MainWindow"
+        WindowStartupLocation="CenterScreen"
+        Width="1700"
+        Title="Заявки"
+        >
+    <Grid RowDefinitions="*, Auto">
+        <Grid Grid.Column="0"   Grid.Row="0" ColumnDefinitions="*, *" > <!-- Background="Azure" -->
+            <Grid Grid.Column="0" RowDefinitions="*, *, *, *, *, *, *">
+                <TextBlock Grid.Row="0"
+                           FontSize="18"
+                           HorizontalAlignment="Center">
+                    Статистика
+                </TextBlock>
+                <TextBox x:Name="applicationcountBox" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100" Grid.Row="2"></TextBox>
+                <TextBox x:Name="averagetimeBox" VerticalAlignment="Top" Width="100" Grid.Row="4"></TextBox>
+                <Button x:Name="Application_Count"  Grid.Row="1" HorizontalAlignment="Center"   Content="Количество выполненных заявок" Click="Application_Count_OnClick"/>
+                <Button x:Name="Average_Complete" Grid.Row="3" HorizontalAlignment="Center"   Content="Среднее время выполнения" Click="Average_Complete_OnClick"/>
+                <Button x:Name="Stats" Grid.Row="5" HorizontalAlignment="Center"   Content="Статистика по типам неисправностей" Click="Stats_OnClick"/>
+            </Grid> 
+            
+            <Grid Grid.Column="1"   RowDefinitions="*, Auto">
+                <TextBox Grid.Row="0" Grid.Column="1" Watermark="Поиск заявки" VerticalAlignment="Top" Width="600" Name="search_app" HorizontalAlignment="Center" TextChanged="Search_app_OnTextChanged" />
+                <DataGrid Grid.Row="0" Grid.Column="2" x:Name="AppDataGrid"
+                          AutoGenerateColumns="False"
+                          IsReadOnly="True"
+                          GridLinesVisibility="All"
+                          BorderThickness="1"
+                          BorderBrush="Gray"
+                          Margin="7,20"
+                          Height="550"
+                          Width="1600"
+                          x:CompileBindings="False">
+                    
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Binding="{Binding App_id}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Приоритет" Binding="{Binding Priority}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Дата заявки" Binding="{Binding App_Date}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Оборудование" Binding="{Binding Equipment}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Серийный номер" Binding="{Binding Serial_number}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Тип неисправности" Binding="{Binding Type}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Клиент" Binding="{Binding Client}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Статус" Binding="{Binding Status}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Комментарий" Binding="{Binding Comment}"></DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Grid Grid.Row="1" Grid.Column="3" ColumnDefinitions="Auto, Auto" >
+                    <Button  x:Name="AddApp_Window" Width="85" Grid.Column="0" HorizontalAlignment="Left"  Content="Добавить" Click="Add_Window_OnClick"/>
+                    <Button Grid.Column="1" x:Name="Edit_Window" HorizontalAlignment="Center"  Content="Изменить" Click="Edit_Window_OnClick"></Button>
+                    
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1" Height="50"  ColumnDefinitions="*, *, *, *" > <!-- Background="Aqua" -->
+            <Button x:Name="Repair_Window" Grid.Column="0"   Content="Работы" Click="Repair_Window_OnClick" />
+            <Button x:Name="Worker_Window" Grid.Column="1"   Content="Работники" Click="Worker_Window_OnClick" />
+            <Button x:Name="Report_Window" Grid.Column="2"   Content="Отчеты" Click="Report_Window_OnClick"/>
+            <Button x:Name="Exit" Grid.Column="4" HorizontalAlignment="Right"  Content="Выйти"   Click="Exit_OnClick" />
+        </Grid>
+    </Grid>
+</Window>

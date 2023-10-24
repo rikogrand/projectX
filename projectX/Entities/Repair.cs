@@ -4,9 +4,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace projectX;
 public class Repair
 {
-    private int Repair_id { get; set; }
-    private int Application { get; set; }
-    private int Worker { get; set; }
-    private int Order { get; set; }
-    private int Service { get; set; }
+    public int Repair_id { get; set; }
+    public int Application { get; set; }
+    public string Worker { get; set; }
+    public string Order { get; set; }
+    public string Service { get; set; }
 }
